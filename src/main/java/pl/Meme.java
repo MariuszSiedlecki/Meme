@@ -16,5 +16,6 @@ public class Meme {
     private String imageUrl;
     private String description;
     private boolean favorite;
+    private  String address;
 
 }
