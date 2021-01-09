@@ -1,13 +1,13 @@
-package pl.demo;
+package pl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MemeyApplication {
+public class MemeApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MemeyApplication.class, args);
+        SpringApplication.run(MemeApplication.class, args);
     }
 
 }
