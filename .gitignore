@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+mvnw.cmd
+mvn
+.gitignore
+src/test/java/pl/demo/MemeApplicationTests.java
