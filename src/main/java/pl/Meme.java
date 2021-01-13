@@ -17,5 +17,17 @@ public class Meme {
     private String description;
     private boolean favorite;
 
+    public Meme(String name, String imageUrl) {
+    }
 
+
+    public void setImageUrl(String imageUrl) {
+        if (imageUrl.startsWith("https://*") ||
+                imageUrl.startsWith("http://*") ||
+                imageUrl.startsWith("www.*")) {
+            this.imageUrl = imageUrl;
+        } else {
+            System.out.println("URL is error");
+        }
+    }
 }
