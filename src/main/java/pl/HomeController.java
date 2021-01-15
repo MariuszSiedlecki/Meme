@@ -12,7 +12,6 @@ import java.util.List;
 @Controller
 public class HomeController {
 
-
     List<Meme> memeList = new ArrayList<>();
 
     @GetMapping("/")
