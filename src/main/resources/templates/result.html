@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Your memes</title>
+</head>
+<body>
+<table>
+    <th:block th:each="meme:${list}"/>
+    <tr>
+        <td th:text="${name.getName()}"/>
+        <td><img th:src="${name.getImageUrl()}"></td>
+    </tr>
+    </th:block>
+</table>
+<form action="/">
+    <imput type="submit" value="Back to home page"></imput>
+</form>
+</body>
+</html>
