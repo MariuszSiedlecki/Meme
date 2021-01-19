@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mem</title>
+</head>
+
+<body class="p-3 mb-2 bg-dark text-white">
+<div class="container">
+    <h1>Add meme</h1>
+    <form action="/add" method="post">
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Meme name</span>
+            </div>
+            <input name="name" required type="text" class="form-control" aria-label="Sizing example input"
+                   aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Url</span>
+            </div>
+            <input name="imageUrl" type="text" class="form-control" aria-label="Sizing example input"
+                   aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">It is favorite</span>
+            </div>
+            <input name="favorite" type="checkbox" class="form-control" aria-label="Text input with checkbox">
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Description</span>
+            </div>
+            <textarea name="description" required class="form-control" aria-label="With textarea"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">Add</button>
+
+    </form>
+    <div class=" mt-4">
+        <form action="/showAll">
+            <button type="submit" class="btn btn-secondary">Show memes</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
