@@ -5,10 +5,12 @@
     <title>Your memes</title>
 </head>
 <body>
+<h1>Names meme:</h1>
 <table>
     <th:block th:each="meme:${list}"/>
     <tr>
         <td th:text="${name.getName()}"/>
+        <h3>Pictures: </h3>
         <td><img th:src="${name.getImageUrl()}"></td>
     </tr>
     </th:block>
