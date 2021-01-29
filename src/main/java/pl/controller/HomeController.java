@@ -13,25 +13,38 @@ import java.util.List;
 @Controller
 public class HomeController {
 
-    List<Meme> memeList = new ArrayList<>();
+    public List<Meme> memeList;
+    private int countIdFromMeme;
+
+    public HomeController() {
+        this.memeList = MemeUtils.memeListData();
+        this.countIdFromMeme = memeList.size();
+    }
 
     @GetMapping("/")
-    public String main() {
-        return "home";
+    public String main(ModelMap map) {
+        map.put("list", sortMemeListById());
+        return "main";
     }
 
-    @PostMapping("/add")
-    public String add(@RequestParam String name,
-                      @RequestParam String imageUrl) {
-        Meme meme = new Meme(name, imageUrl);
+    @PostMapping("/save")
+    public String save(@ModelAttribute Meme meme) {
+
+        if (meme.getId() == 0) {
+            countIdFromMeme++;
+            meme.setId(countIdFromMeme);
+        } else {
+            memeList.remove(getMemeById(meme.getId()));
+        }
         memeList.add(meme);
-        return "home";
+        return "redirect:/";
     }
 
-    @GetMapping("/showAll")
-    public String showAll(ModelMap map) {
-        map.put("list", memeList);
-        return "result";
+    @GetMapping("/add")
+    public String add(Model model) {
+        Meme newMeme = new Meme();
+        model.addAttribute("meme", newMeme);
+        return "add";
     }
 
 }
