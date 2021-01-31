@@ -17,10 +17,13 @@ public class Meme {
     private String description;
     private boolean favorite;
 
-    public Meme(String name, String imageUrl) {
+    public void setImage(InputStream inputStream) throws IOException {
+        byte[] imageBytes = StreamUtils.copyToByteArray(inputStream);
+        String imageStr = Base64.encodeBase64String(imageBytes);
+        inputStream.close();
+        this.image = imageStr;
     }
-
-
+//todo
     public void setImageUrl(String imageUrl) {
         if (imageUrl.startsWith("https://*") ||
                 imageUrl.startsWith("http://*") ||
