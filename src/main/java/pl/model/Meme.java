@@ -16,6 +16,13 @@ public class Meme {
     private String imageUrl;
     private String description;
     private boolean favorite;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
+    private LocalDateTime updateDate = LocalDateTime.now();
+    //private MultipartFile file;
+    private String image;
+
+    public Meme(String barbados, String s, String s1, Boolean aFalse) {
+    }
 
     public void setImage(InputStream inputStream) throws IOException {
         byte[] imageBytes = StreamUtils.copyToByteArray(inputStream);
