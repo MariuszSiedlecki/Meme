@@ -27,6 +27,12 @@ public class HomeController {
         return "main";
     }
 
+    @GetMapping("/favorite")
+    public String favorite(ModelMap map) {
+        map.put("list", getFavoriteMemeList());
+        return "main";
+    }
+
     @PostMapping("/save")
     public String save(@ModelAttribute Meme meme) {
 
