@@ -1,0 +1,33 @@
+.inline {
+    display: inline-flex;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.centered {
+    text-align: center;
+    margin: auto;
+}
+
+.updateDateStyle {
+    font-size: 11px;
+    font-style: italic;
+}
+
+.navbarBlockingStyle {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+.max-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.containerStyle{
+    position: relative;
+    top: 50px;
+}
