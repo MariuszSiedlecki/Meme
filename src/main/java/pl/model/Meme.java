@@ -30,15 +30,8 @@ public class Meme {
         inputStream.close();
         this.image = imageStr;
     }
-//todo
-    public void setImageUrl(String imageUrl) {
-        if (imageUrl.startsWith("https://*") ||
-                imageUrl.startsWith("http://*") ||
-                imageUrl.startsWith("www.*")) {
-            this.imageUrl = imageUrl;
-        } else {
-            System.out.println("URL is error");
-        }
-    }
 
+    public void setImage(String image){
+        this.image = image;
+    }
 }
