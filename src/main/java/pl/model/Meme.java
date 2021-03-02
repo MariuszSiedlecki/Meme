@@ -14,8 +14,11 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @NoArgsConstructor
+@RequiredArgsConstructor
 public class Meme {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @NonNull
     private String name;
