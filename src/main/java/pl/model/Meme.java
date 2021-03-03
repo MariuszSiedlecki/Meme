@@ -5,6 +5,7 @@ import org.apache.tomcat.util.codec.binary.Base64;
 import org.hibernate.validator.constraints.URL;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.util.StreamUtils;
+import pl.controller.security.UserDto;
 
 import javax.persistence.*;
 import java.io.IOException;
@@ -20,6 +21,12 @@ public class Meme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @ManyToOne
+    @JoinColumn
+    @EqualsAndHashCode.Exclude
+    @NonNull
+    private UserDto userDtoOwner;
     @NonNull
     private String name;
     @URL
