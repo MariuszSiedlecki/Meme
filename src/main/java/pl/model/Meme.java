@@ -50,7 +50,7 @@ public class Meme {
         this.image = imageStr;
     }
 
-    public void setImage(String image){
+    public void setImage(String image) {
         this.image = image;
     }
 }
