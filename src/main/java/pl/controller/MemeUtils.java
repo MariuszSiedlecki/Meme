@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MemeUtils {
 
-    public static List<Meme> memeListData() {
+ /*   public static List<Meme> memeListData() {
         List<Meme> memeList = new ArrayList<>();
         Meme meme1 = new Meme("Barbados", "https://www.askideas.com/media/37/Incredible-View-Of-Petronas-Towers-Malaysia.jpg", "This is a free HD wallpaper landscape themes,");
         Meme meme2 = new Meme("View", "https://www.askideas.com/media/37/Incredible-View-Of-Petronas-Towers-Malaysia.jpg", "Malesia is a biogeographical region straddling the Equator and the boundaries of the Indomalayan and Australasian realms, and also a phytogeographical floristic region in the Paleotropical Kingdom.");
@@ -44,5 +44,5 @@ public class MemeUtils {
         memeList.add(meme8);
         memeList.add(meme9);
         return memeList;
-    }
+    } */
 }
