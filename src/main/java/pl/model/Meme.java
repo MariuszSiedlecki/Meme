@@ -36,7 +36,6 @@ public class Meme {
     @NonNull
     @Column(columnDefinition = "LONGTEXT")
     private String description;
-    @NonNull
     private boolean favorite;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime updateDate = LocalDateTime.now();
